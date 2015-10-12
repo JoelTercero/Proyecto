@@ -19,4 +19,11 @@ class PersonaController
         Persona persona=personaService.guardarPersona(params)
         redirect(view: '/persona/index',model: [personas: persona])
     }
+    def buscarPersona()
+    {
+        println "Persona a Buscar "+params.busqueda
+        List<Persona> persona = Persona.findAllByNombreIlike(params.busqueda)
+        println "Datos "+persona
+        render(template: 'tabla', model: [personas:persona])
+    }
 }

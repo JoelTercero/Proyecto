@@ -34,19 +34,20 @@ class PersonaService
         persona
     }
 
-    List<Persona> listarPersona(params)
+    //List<Persona> listarPersona(params)
+    def listarPersona()
     {
-        println params
+        //println params
         /*params.nombre="Joel"
         params.apellidoPaterno="Tercero"
         params.apellidoMaterno="Perez"
         params.fechaNacimiento=new Date()
         params.edad=26
         guardarPersona(params)*/
-        List<Persona> listaPersonas=Persona.findAll()
-        println "listaPersonas "+listaPersonas
-        listaPersonas
+        //List<Persona> listaPersonas=Persona.findAll()
+        //println "listaPersonas "+listaPersonas
+        //listaPersonas
 
-        //Persona.list()
+        Persona.list()
     }
 }

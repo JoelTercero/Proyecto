@@ -5,7 +5,7 @@ class PersonaController
     def personaService
     def index()
     {
-        List<Persona> persona=personaService.listarPersona(params)
+        List<Persona> persona=personaService.listarPersona()
         println "persona "+persona
         render(view: '/persona/index',model: [personas: persona])
     }
@@ -17,6 +17,6 @@ class PersonaController
     def guardar()
     {
         Persona persona=personaService.guardarPersona(params)
-        render(view: '/persona/index',model: [personas: persona])
+        redirect(view: '/persona/index',model: [personas: persona])
     }
 }

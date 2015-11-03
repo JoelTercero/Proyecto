@@ -50,4 +50,13 @@ class PersonaService
 
         Persona.list()
     }
+
+    Map<Object, Object> listarPersonas(params)
+    {
+        def mapa = []
+        List<Persona> listaPersonas=Persona.list(max: params.max, offset: params.offset)
+        mapa.listaPersonas=listarPersonas
+        mapa.totalPersonas=listaPersonas.size()
+        listarPersonas
+    }
 }

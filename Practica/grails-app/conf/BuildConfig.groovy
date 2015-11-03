@@ -56,6 +56,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+        compile ":remote-pagination:0.4.5"
         // plugins for the build system only
         build ":tomcat:7.0.53"
 

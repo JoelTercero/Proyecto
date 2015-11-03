@@ -92,6 +92,7 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.dbconsole.urlRoot='/admin/dbconsole'
     }
     production {
         grails.logging.jul.usebridge = false
